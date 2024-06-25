@@ -5,11 +5,22 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import App from './App';
+import Skills from './Skills';
+import Contact from './Contact';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Welcome into my Portfolio</div>,
+    element: <App />,
+  },
+  {
+    path: "/skills",
+    element: <Skills />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
 ]);
 
