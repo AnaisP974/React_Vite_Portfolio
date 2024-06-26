@@ -47,11 +47,11 @@ Ensuite, ajouter une commande à `package.json` pour générer et mettre en plac
 
 Mittre en place les librairies et package nécessaires :
 
-## REACT ROUTER DOM
-- `react-router-dom` est taillé pour la navigation dans une interface react . Il permet de gérer les routes et les navigations.
-documantation : https://reactrouter.com/en/main/start/tutorial;
+### React Router DOM
 
-Mise en place minimale : 
+`react-router-dom` est taillé pour la navigation dans un interface React. Il permet de gérer les routes et les redirections.
+
+Mise en place minimal :
 
 ```bash
 pnpm install react-router-dom
@@ -61,7 +61,7 @@ pnpm install react-router-dom
 
 On se rend dans le fichier `main.tsx`et on y ajoute les éléments suivants :
 
-L'importantion de `createBrowserRouter` et `RouterProvider` :
+L'importation de `createBrowserRouter` et `RouterProvider` :
 
 ```tsx
 import {
@@ -89,8 +89,52 @@ const router = createBrowserRouter([
 ]);
 ```
 
+Il faut ensuite mettre à disposition le routeur dans l'application avec la classe RouterProvider. Notez que le composant prend une prop `router` qui est le routeur lui-même :
+
+```tsx
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+      <RouterProvider router={router} />
+  </React.StrictMode>,
+);
+```
+
 Suite à cela, nous pouvons créer et ajouter des liens avec le composant `NavLink` ou `Link` :
 
 ```tsx
 <NavLink to="/">Accueil</NavLink>
 ```
+
+### Animate.css
+
+Animate.css est une librairie CSS qui permet de créer des animations facilement. Son installation est simple :
+
+```bash
+pnpm i animate.css --save
+```
+
+Pour l'utiliser, il suffit d'ajouter d'abor la className "animate__animated" à l'élément que vous souhaitez animer. Ensuite, ajoutez la classe de l'animation que vous souhaitez utiliser. Par exemple, pour un effet de bounce :
+
+```tsx
+<div className="animate__animated animate__bounce">Skills</div>
+```
+
+La liste des animation disponible [ici](https://animate.style/)
+
+## Étape 5
+
+Organisation du projet : 
+
+src/
+  components/
+    Nav.tsx
+  pages/
+    Home.tsx
+    Skills.tsx
+    Contact.tsx
+  main.tsx
+  input.css
+  styles.css
+
+
+  ## Étape 6

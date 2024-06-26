@@ -1,5 +1,6 @@
-import Nav from './components/nav'
-import './styles.css'
+import Nav from '../components/nav'
+import '../styles.css'
+
 
 function Skills() {
   return (
