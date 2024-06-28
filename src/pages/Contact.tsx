@@ -29,7 +29,7 @@ export default function Contact() {
       >
           
       <input type="hidden" name="access_key" value="7a66c5a5-5214-4159-b9c4-5bf3eefdac5e" />
-        <div className="">
+        
           <div className="pb-12 border-b border-gray-900/10">
             <h2 className="text-base font-semibold leading-7">Fell free to contact me</h2>
             <p className="mt-1 text-sm leading-6 text-slate-200">Fill this form to reach me, I'll be happy to answer you in a few days.</p>
@@ -156,7 +156,7 @@ export default function Contact() {
                           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="#ffffff" d="M3 20V4l19 8M5 17l11.85-5L5 7v3.5l6 1.5l-6 1.5M5 17V7v6.5Z"/></svg>
                       </button>
                   </div>
-              </div>
+            
       </form>
     </main>
   );
